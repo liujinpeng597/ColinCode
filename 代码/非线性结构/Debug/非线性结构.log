@@ -1,0 +1,6 @@
+﻿  02Unrec.cpp
+  03BST.cpp
+  正在生成代码...
+  LINK : 没有找到 C:\Users\24191\Desktop\科林明伦\科林明伦-二阶段\代码\20250419C++基础\Debug\非线性结构.exe 或上一个增量链接没有生成它；正在执行完全链接
+源.obj : error LNK2005: _main 已经在 03BST.obj 中定义
+C:\Users\24191\Desktop\科林明伦\科林明伦-二阶段\代码\20250419C++基础\Debug\非线性结构.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
