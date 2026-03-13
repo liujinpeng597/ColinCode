@@ -1,0 +1,14 @@
+﻿生成启动时间为 2021/8/26 上午 10:14:58。
+     1>项目“C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\C_2_1\C_2_1.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TC /errorReport:prompt "02_一级指针.c"
+         02_一级指针.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\x64\Debug\C_2_1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\x64\Debug\C_2_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\x64\Debug\C_2_1.lib" /MACHINE:X64 "x64\Debug\01_内存地址.obj"
+         "x64\Debug\02_一级指针.obj"
+         C_2_1.vcxproj -> C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\x64\Debug\C_2_1.exe
+     1>已完成生成项目“C:\Users\zhangjinhai\Documents\Visual Studio 2012\Projects\gametest2\C_2_1\C_2_1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.47

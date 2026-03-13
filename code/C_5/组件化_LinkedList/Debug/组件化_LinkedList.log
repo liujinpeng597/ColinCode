@@ -1,0 +1,8 @@
+﻿  Collections.cpp
+  LinkedList.cpp
+  useCollections.cpp
+C:\Users\24191\Desktop\科林明伦\C_5\组件化_LinkedList\useCollections.cpp(21,16): error C2065: “wordCmp”: 未声明的标识符
+C:\Users\24191\Desktop\科林明伦\C_5\组件化_LinkedList\useCollections.cpp(22,40): error C2065: “wordCmp”: 未声明的标识符
+C:\Users\24191\Desktop\科林明伦\C_5\组件化_LinkedList\useCollections.cpp(26,9): warning C4551: 缺少参数列表的函数调用
+  测试栈队列.cpp
+  正在生成代码...

@@ -1,0 +1,10 @@
+﻿  TestString_pro.cpp
+  string_pro.cpp
+  正在生成代码...
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(51,2): error C2561: “charLastIndexOf”: 函数必须返回值
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(76,2): error C2561: “leftTrim”: 函数必须返回值
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(81,2): error C2561: “rightTrim”: 函数必须返回值
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(113,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(134,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(136,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\24191\Desktop\科林明伦\C_4\组件化_string\string_pro.cpp(137,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

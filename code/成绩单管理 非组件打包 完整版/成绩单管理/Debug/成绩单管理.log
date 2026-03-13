@@ -1,0 +1,11 @@
+﻿  crud.cpp
+  data_manage.cpp
+  Collections.cpp
+  LinkedList.cpp
+  string_pro.cpp
+  login.cpp
+C:\Users\85617\Desktop\20241207\C语言学习\成绩单管理\login.cpp(45,17): warning C4018: “<”: 有符号/无符号不匹配
+  main.cpp
+  order.cpp
+  正在生成代码...
+  成绩单管理.vcxproj -> C:\Users\85617\Desktop\20241207\C语言学习\Debug\成绩单管理.exe

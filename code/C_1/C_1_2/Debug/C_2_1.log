@@ -1,0 +1,36 @@
+﻿生成启动时间为 2021/8/12 下午 4:51:58。
+     1>项目“C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\C_2_1\C_2_1.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt 31gameframework.cpp
+         31gameframework.cpp
+     1>c:\users\zhangjinhai\documents\visual studio 2012\projects\gametest2\c_2_1\31gameframework.cpp(165): warning C4996: '_swprintf': This function or variable may be unsafe. Consider using _swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\wchar.h(784) : 参见“_swprintf”的声明
+     1>c:\users\zhangjinhai\documents\visual studio 2012\projects\gametest2\c_2_1\31gameframework.cpp(170): warning C4996: '_swprintf': This function or variable may be unsafe. Consider using _swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\wchar.h(784) : 参见“_swprintf”的声明
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\Debug\C_1_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\Debug\C_1_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\Debug\C_1_2.lib" /MACHINE:X86 "Debug\01_规格.obj"
+         "Debug\02_速度.obj"
+         "Debug\11_图形to代码.obj"
+         "Debug\12_图形to代码.obj"
+         "Debug\13_图形to代码.obj"
+         "Debug\14_图形to代码.obj"
+         "Debug\15_图形to代码.obj"
+         "Debug\16_图形to代码.obj"
+         "Debug\201_代码to图形.obj"
+         "Debug\202_代码to图形.obj"
+         "Debug\203_代码to图形.obj"
+         "Debug\204_代码to图形.obj"
+         "Debug\205_代码to图形.obj"
+         "Debug\206_代码to图形.obj"
+         "Debug\207_代码to图形.obj"
+         "Debug\208_代码to图形.obj"
+         "Debug\209_代码to图形.obj"
+         "Debug\210_代码to图形.obj"
+         "Debug\211_代码to图形.obj"
+         Debug\31gameframework.obj
+         C_2_1.vcxproj -> C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\Debug\C_1_2.exe
+     1>已完成生成项目“C:\Users\zhangjinhai\documents\visual studio 2012\Projects\gametest2\C_2_1\C_2_1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.99

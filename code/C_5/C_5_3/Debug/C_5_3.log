@@ -1,0 +1,6 @@
+﻿  01_共用体.c
+  02_共用体注意事项.c
+  正在生成代码...
+C:\Users\24191\Desktop\科林明伦\C_5\C_5_3\02_共用体注意事项.c(18,11): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“double”
+C:\Users\24191\Desktop\科林明伦\C_5\C_5_3\02_共用体注意事项.c(20,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C_5_3.vcxproj -> D:\colinC\C语言技术体系\Debug\C_5_3.exe

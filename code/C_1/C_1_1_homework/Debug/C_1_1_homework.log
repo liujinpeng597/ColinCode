@@ -1,0 +1,15 @@
+﻿  01.c
+  02.c
+C:\Users\24191\Desktop\科林明伦\C_1\C_1_1_homework\02.c(9,22): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  03.c
+  04.c
+  05.c
+  06.c
+  06_2.c
+C:\Users\24191\Desktop\科林明伦\C_1\C_1_1_homework\06_2.c(16,11): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  07.c
+  08.c
+  09.c
+  10.c
+  正在生成代码...
+  C_1_1_homework.vcxproj -> D:\colinC\C语言技术体系\Debug\C_1_1_homework.exe

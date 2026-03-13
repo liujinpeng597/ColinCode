@@ -1,0 +1,8 @@
+﻿  01组件起步.c
+  arrays.cpp
+  02testArrays.cpp
+  03useArrays.cpp
+C:\Users\24191\Desktop\科林明伦\C_3\组件化_arrays\03useArrays.cpp(21,6): warning C4101: “students”: 未引用的局部变量
+C:\Users\24191\Desktop\科林明伦\C_3\组件化_arrays\03useArrays.cpp(22,6): warning C4101: “classes”: 未引用的局部变量
+  正在生成代码...
+  组件化_arrays.vcxproj -> D:\colinC\C语言技术体系\Debug\组件化_arrays.exe

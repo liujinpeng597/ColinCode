@@ -1,0 +1,26 @@
+﻿  01_内存地址.c
+  02_指针变量与地址.c
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\01_内存地址.c(7,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(29,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(29,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“int *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(29,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“int *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(30,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“short *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(30,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“short *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(30,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“short *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(31,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(31,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“char *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(31,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“char *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(32,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64 *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(32,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“__int64 *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(32,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“__int64 *”
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(21,9): warning C4133: “初始化”: 从“int *”到“short *”的类型不兼容
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(22,8): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\02_指针变量与地址.c(23,13): warning C4133: “初始化”: 从“int *”到“__int64 *”的类型不兼容
+  03_面试题：大端与小端.c
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\03_面试题：大端与小端.c(33,8): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
+  04_指针注意事项.c
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\04_指针注意事项.c(37,7): error C2086: “int *p”: 重定义
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\04_指针注意事项.c(38,8): error C2040: “pp”:“int **”与“int *”的间接寻址级别不同
+C:\Users\24191\Desktop\科林明伦\C_2\C_2\C_2_1\04_指针注意事项.c(39,9): warning C4047: “初始化”:“int ***”与“int **”的间接级别不同
+  05_多级指针.c
+  正在生成代码...

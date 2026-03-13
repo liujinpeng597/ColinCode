@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="EditPlus">
+
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<style>
+	#zb
+	{
+		border:1px solid black;
+		border-collapse :collapse;
+		color:black;
+	}
+
+	#zb tr td
+	{
+		border:1px solid black;
+
+	}
+</style>
+<BODY>
+	<TEXTAREA id="tishi"  style="position:absolute;top:0px;left:500px;height:500px;widht:100px;"></TEXTAREA>
+</BODY>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+	//表格（坐标）:刻度 行列
+	//行列， 单元格宽度
+    function zuoBiaoXi(hang,lie,kuan,px,py)
+	{
+		var table  = document.createElement("table");
+		table.border="1";
+		table.style.width=hang*kuan+"px";
+		table.style.height=lie*kuan+"px";
+		table.id = "zb";
+ 		table.style.position="absolute";
+		table.style.left=px+"px";
+		table.style.top=py+"px";
+		document.body.appendChild(table);
+
+		for(var h=0;h<hang;h++)
+		{
+			var tr = table.insertRow(h);
+			for(var l=0;l<lie;l++)
+			{
+				var td = tr.insertCell(l);
+				td.innerHTML = "&nbsp;";
+				td.style.width=kuan+"px";
+				td.style.height=kuan+"px";
+				 
+					td.style.fontSize="12pt";
+					td.innerHTML = h+","+l;
+					td.style.padding="0px";
+					td.align="center";
+					td.style.verticalAlign ="middle";
+				 if((h+l)%2==0)
+				 {
+					td.style.backgroundColor="black";
+					td.style.color="white";
+				 }
+				 else
+				 {
+					 td.style.backgroundColor="white";
+					td.style.color="black";
+				 }
+	
+				td.title = h+"行 +" + l+"列 =" +(h+l) 
+				 td.onclick = function()
+				 {
+					document.getElementById("tishi").value+=this.title+"\n";
+				 }
+			}
+		}
+	}
+zuoBiaoXi(10,10,50,0,0);
+  
+  </SCRIPT>
+</HTML>

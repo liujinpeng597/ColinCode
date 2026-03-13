@@ -1,0 +1,6 @@
+﻿  text.c
+C:\Users\24191\Desktop\科林明伦\PeriorText\PeriorText\text.c(24,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+C:\Users\24191\Desktop\科林明伦\PeriorText\PeriorText\text.c(25,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+C:\Users\24191\Desktop\科林明伦\PeriorText\PeriorText\text.c(17,6): warning C4101: “arr”: 未引用的局部变量
+C:\Users\24191\Desktop\科林明伦\PeriorText\PeriorText\text.c(18,7): warning C4101: “p”: 未引用的局部变量
+  PeriorText.vcxproj -> C:\Users\24191\Desktop\科林明伦\PeriorText\x64\Debug\PeriorText.exe

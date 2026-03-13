@@ -1,0 +1,2 @@
+﻿无限循环.obj : error LNK2005: _main 已经在 a_汉译英_4 循环_知起止.obj 中定义
+D:\colinC\C语言技术体系\Debug\C_1_1.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
