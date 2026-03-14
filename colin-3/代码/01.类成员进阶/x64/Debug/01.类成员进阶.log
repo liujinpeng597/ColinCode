@@ -1,0 +1,14 @@
+﻿  01.类成员.cpp
+  02.this指针.cpp
+  03初始化参数列表.cpp
+  04常成员函数.cpp
+  05静态成员.cpp
+  06静态成员使用.cpp
+  07总结.cpp
+  08拷贝构造函数.cpp
+  09总结.cpp
+  正在生成代码...
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01.类成员进阶\09总结.cpp(51,1): warning C4715: “CTest::operator=”: 不是所有的控件路径都返回值
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01.类成员进阶\08拷贝构造函数.cpp(70,1): warning C4715: “CTest::operator=”: 不是所有的控件路径都返回值
+09总结.obj : error LNK2005: main 已经在 08拷贝构造函数.obj 中定义
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\x64\Debug\二.类成员进阶.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

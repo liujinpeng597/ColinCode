@@ -1,0 +1,6 @@
+﻿  01类基础.cpp
+  02面向对象编程.cpp
+  03面向对象练习.cpp
+  正在生成代码...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\x64\Debug\一. 类基础.exe : fatal error LNK1120: 1 个无法解析的外部命令

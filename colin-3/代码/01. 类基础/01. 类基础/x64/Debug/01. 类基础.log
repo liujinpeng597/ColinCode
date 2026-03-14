@@ -1,0 +1,7 @@
+﻿  03面向对象练习.cpp
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\03面向对象练习.cpp(121,28): warning C4305: “-=”: 从“double”到“float”截断
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\03面向对象练习.cpp(127,28): warning C4305: “+=”: 从“double”到“float”截断
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\03面向对象练习.cpp(136,45): warning C4305: “-=”: 从“double”到“float”截断
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\03面向对象练习.cpp(141,45): warning C4305: “+=”: 从“double”到“float”截断
+C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\03面向对象练习.cpp(159,36): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+  01. 类基础.vcxproj -> C:\Users\24191\Desktop\科林明伦\科林明伦-三阶段\代码\01. 类基础\x64\Debug\01. 类基础.exe
