@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<title>Wireshark 4.2.4 Release Notes</title>
+<link rel="stylesheet" href="./ws.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Wireshark 4.2.4 Release Notes</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_what_is_wireshark">What is Wireshark?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wireshark is the world’s most popular network protocol analyzer.
+It is used for troubleshooting, analysis, development and education.</p>
+</div>
+<div class="paragraph">
+<p>Wireshark is hosted by the Wireshark Foundation, a nonprofit which promotes protocol analysis education.
+Wireshark and the foundation depend on your contributions in order to do their work.
+If you or your organization would like to contribute or become a sponsor, please visit <a href="https://wiresharkfoundation.org">wiresharkfoundation.org</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_new">What’s New</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bug_fixes">Bug Fixes</h3>
+<div class="paragraph">
+<p>If you are upgrading Wireshark 4.2.0 or 4.2.1 on Windows you will need to <a href="https://www.wireshark.org/download.html">download and install</a> Wireshark 4.2.4 or later by hand.</p>
+</div>
+<div class="paragraph">
+<p>The following vulnerabilities have been fixed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.wireshark.org/security/wnpa-sec-2024-06">wnpa-sec-2024-06</a>
+T.38 dissector crash.
+<a href="https://gitlab.com/wireshark/wireshark/-/issues/19695">Issue 19695</a>.
+<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2955">CVE-2024-2955</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, CVE-2024-24478, CVE-2024-24479, and CVE-2024-24476 were recently assigned to Wireshark without any coordination with the Wireshark project.
+As far as we can determine, each one is based on invalid assumptions and we have requested that they be rejected.</p>
+</div>
+<div class="paragraph">
+<p>The following bugs have been fixed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extcap with configuration never starts; "Configure all extcaps before start of capture." is shown instead. <a href="https://gitlab.com/wireshark/wireshark/-/issues/18487">Issue 18487</a>.</p>
+</li>
+<li>
+<p>Packet Dissection CSV Export includes last column even if hidden. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19666">Issue 19666</a>.</p>
+</li>
+<li>
+<p>Inject TLS secrets closes Wireshark on Windows. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19667">Issue 19667</a>.</p>
+</li>
+<li>
+<p>Fuzz job issue: fuzz-2024-02-27-7196.pcap. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19674">Issue 19674</a>.</p>
+</li>
+<li>
+<p>Wireshark crashes when adding another port to the HTTP dissector. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19677">Issue 19677</a>.</p>
+</li>
+<li>
+<p>Fuzz job issue: fuzz-2024-03-03-7204.pcap. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19685">Issue 19685</a>.</p>
+</li>
+<li>
+<p>Fuzz job issue: randpkt-2024-03-05-8004.pcap. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19688">Issue 19688</a>.</p>
+</li>
+<li>
+<p>When adding a new row to a table an error report may be inserted. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19705">Issue 19705</a>.</p>
+</li>
+<li>
+<p>'--export-objects' does not work as expected on tshark version later than 3.2.10. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19715">Issue 19715</a>.</p>
+</li>
+<li>
+<p>Fuzz job issue: fuzz-2024-03-21-7215.pcap. <a href="https://gitlab.com/wireshark/wireshark/-/issues/19717">Issue 19717</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_and_updated_features">New and Updated Features</h3>
+<div class="paragraph">
+<p>There are no new or updated features in this release.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_protocol_support">New Protocol Support</h3>
+<div class="paragraph">
+<p>There are no new protocols in this release.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_updated_protocol_support">Updated Protocol Support</h3>
+<div class="paragraph">
+<p>5GLI, 6LoWPAN, AFP, AllJoyn, AMQP, ASAP, Babel, BACnet, Banana, BEEP, Bencode, BFCP, BGP, BT BNEP, BT SDP, BT-DHT, BVLC, CFLOW, CIP, CMIP, CMP, COROSYNC/TOTEMSRP, COSE, CQL, CSN.1, DAP, DCCP, DCOM, DHCPv6, DICOM, DISP, DOCSIS MAC MGMT, DOF, DVB-S2, E2AP, EDONKEY, ENRP, ErlDP, Etch, EXTREME MESH, FC-SWILS, GIOP, GLOW, GNW, GOOSE, GQUIC, Gryphon, GSM A-bis OML, GSUP, GTPv2, H.223, H.225.0, H.245, H.248, H.264, H.265, HSMS, ICMPv6, ICQ, IEEE1609dot2, IPP, IPPUSB, ISAKMP, iSCSI, ISIS LSP, ISO 7816, ISUP, ITS, JSON 3GPP, JXTA, Kafka, KINK, KNX/IP, LDAP, LDP, LISP, LISP TCP, LLRP, LwM2M-TLV, M2UA, M3UA, MAC-LTE, MBIM, MMS, MONGO, MPEG PES, MPLS Echo, MQ PCF, MQTT-SN, MS-WSP, MSDP, MsgPack, NAS-5GS, NETLINK, NHRP, OpenFlow, OpenWire, OPSI, OSC, P22, P7, PANA, PIM, PNIO, ProtoBuf, PROXY, Q.2931, QNET, RDP, RESP, RPL, RSL, RSVP, RTLS, RTMPT, RTPS, S7COMM, SCTP, SIMULCRYPT, SMB2, SML, SNA, SNMP, Socks, SolarEdge, SOME/IP, SoulSeek, SUA, T.38, TCAP, TEAP, TFTP, Thread, Thrift, TN5250, USBHID, USBVIDEO, VP9, WASSP, WiMAX ASN CP, WLCCP, WTP, X.509IF, X.509SAT, XML, XMPP, YAMI, Z39.50, and ZigBee ZCL</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_and_updated_capture_file_support">New and Updated Capture File Support</h3>
+<div class="paragraph">
+<p>There is no new or updated capture file support in this release.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_updated_file_format_decoding_support">Updated File Format Decoding Support</h3>
+<div class="paragraph">
+<p>BLF, JPEG, and RBM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prior_versions">Prior Versions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document only describes the changes introduced in Wireshark 4.2.4.
+You can find release notes for prior versions at the following locations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.wireshark.org/docs/relnotes/wireshark-4.2.2.html">Wireshark 4.2.3</a></p>
+</li>
+<li>
+<p><a href="https://www.wireshark.org/docs/relnotes/wireshark-4.2.2.html">Wireshark 4.2.2</a></p>
+</li>
+<li>
+<p><a href="https://www.wireshark.org/docs/relnotes/wireshark-4.2.1.html">Wireshark 4.2.1</a></p>
+</li>
+<li>
+<p><a href="https://www.wireshark.org/docs/relnotes/wireshark-4.2.0.html">Wireshark 4.2.0</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_wireshark">Getting Wireshark</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wireshark source code and installation packages are available from
+<a href="https://www.wireshark.org/download.html" class="bare">https://www.wireshark.org/download.html</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_vendor_supplied_packages">Vendor-supplied Packages</h3>
+<div class="paragraph">
+<p>Most Linux and Unix vendors supply their own Wireshark packages.
+You can usually install or upgrade Wireshark using the package management system specific to that platform.
+A list of third-party packages can be found on the
+<a href="https://www.wireshark.org/download.html">download page</a>
+on the Wireshark web site.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_locations">File Locations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wireshark and TShark look in several different locations for preference files, plugins, SNMP MIBS, and RADIUS dictionaries.
+These locations vary from platform to platform.
+You can use <span class="menuseq"><b class="menu">Help</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">About Wireshark</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Folders</b></span> or <code>tshark -G folders</code> to find the default locations on your system.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_help">Getting Help</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The User’s Guide, manual pages and various other documentation can be found at
+<a href="https://www.wireshark.org/docs/" class="bare">https://www.wireshark.org/docs/</a></p>
+</div>
+<div class="paragraph">
+<p>Community support is available on
+<a href="https://ask.wireshark.org/">Wireshark’s Q&amp;A site</a>
+and on the wireshark-users mailing list.
+Subscription information and archives for all of Wireshark’s mailing lists can be found on
+<a href="https://www.wireshark.org/lists/">the web site</a>.</p>
+</div>
+<div class="paragraph">
+<p>Bugs and feature requests can be reported on
+<a href="https://gitlab.com/wireshark/wireshark/-/issues">the issue tracker</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can learn protocol analysis and meet Wireshark’s developers at
+<a href="https://sharkfest.wireshark.org">SharkFest</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_you_can_help">How You Can Help</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Wireshark Foundation helps as many people as possible understand their networks as much as possible.
+You can find out more and donate at <a href="https://wiresharkfoundation.org">wiresharkfoundation.org</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frequently_asked_questions">Frequently Asked Questions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A complete FAQ is available on the
+<a href="https://www.wireshark.org/faq.html">Wireshark web site</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Learn Something"
+  short_description: "为指定知识点生成结构化中文 Markdown 学习笔记"
+  default_prompt: "使用 $learn-something 为指定知识点创建结构化中文 Markdown 学习笔记。"
+
+policy:
+  allow_implicit_invocation: false

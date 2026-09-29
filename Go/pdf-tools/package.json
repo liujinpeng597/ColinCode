@@ -1,0 +1,1 @@
+{"name":"golang-pdf-gen","version":"1.0.0","private":true,"description":"Generate a Golang knowledge checklist PDF","dependencies":{"@napi-rs/canvas":"^1.0.8","pdfjs-dist":"^6.3.289","pdfkit":"^0.20.2","sharp":"^0.35.4"}}

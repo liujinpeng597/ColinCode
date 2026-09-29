@@ -1,0 +1,31 @@
+2026.8.3 
+因为服务器的内存太小，用vscode ssh连接服务器会导致服务器内存溢出，最终导致服务器崩溃，所以推倒第一天的vscode直连服务器
+选择正常使用虚拟机编程，代码push到github的video_conference_server仓库，最后用termius ssh连接服务器 pull下github代码的方式
+
+详细设计落地记录功能模块与用例设计 (Use Case)：
+细化了“用户体系模块”，“会议管理模块”，“会中核心控制”三大模块。
+确定了三大模块中的基本功能。
+
+核心业务流程梳理 (时序图与活动图)：
+使用 PlantUML 绘制了三大核心业务流：
+基于“Epoll + 线程池 + MySQL”的登录鉴权时序图。
+基于内存状态机 RoomManager 的会场控制信令广播时序图（毫秒级全员状态同步）。
+基于 UDP 通道的音视频媒体流分发活动图（涵盖客户端采集、H.264/AAC编码、服务端路由转发到接收端渲染的全生命周期）。
+
+详细类图与模块设计 (Class Diagram)：
+服务端核心类：
+暂定了 EpollReactor (底层网络驱动)、TcpConnection (连接封装)、RoomManager (内存单例路由表) 以及 ThreadPool (异步任务处理) 的属性与方法，并理清了依赖关系。  
+客户端核心类：
+设计了封装 TCP/UDP 双通道的 NetworkClient 和统筹软硬件编解码的 AudioVideoEngine。 
+ 
+网络通信协议制定 (Protocol & Payload)：
+包头：
+确立了防止粘包的 TLV 架构定长包头（4字节 body_len + 2字节 cmd_type）。
+协议制订：  
+规划了命令字号段（心跳保活、用户鉴权、会议管理、会中控制）。
+数据传输格式：先JSON后Protobuf
+敲定了项目的序列化演进路线：研发联调期采用 JSON 格式以保证开发效率和可视化调试，性能压测阶段再平滑迁移至 Protobuf 协议。编写了登录、入会、状态广播等核心接口的 JSON 报文规范。  
+
+持久化存储与数据库设计 (ER Design)：
+完成服务端 Azure MySQL 的核心表结构设计，包括 user_info (用户表)、meeting_room (会议室表) 和 meeting_participant (参会流水表)，剥离外键约束以应对高并发。  
+规划了客户端本地 SQLite 缓存方案（local_preferences、local_history_meetings），以实现无网弱网下的 UI 秒开体验。  

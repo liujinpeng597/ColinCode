@@ -1,0 +1,25 @@
+英文代码     汉字解释      
+—————   ————
+#			预处理的标志
+include		包含
+stdio.h		标准stander输入input输出output头文件head(*.h)
+
+main		主要的函数（主函数） 程序的执行入口，一个项目只能一个主函数
+
+int			整型 
+float		实型/浮点型/小数型
+char		字符型
+return		返回
+printf		格式化format打印print
+
+if			如果
+else		否则
+
+switch		分支
+case		当.....情况时
+break		打断流程
+default		默认情况
+
+for			对于....开始循环
+while		每当....开启循环
+do			先做....再 开启循环

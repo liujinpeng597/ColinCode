@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<style>
+	#zb
+	{
+		border:1px solid black;
+		border-collapse :collapse;
+		color:white;
+	}
+
+	#zb tr td
+	{
+		border:1px solid black;
+
+	}
+
+	.piao
+	{
+		float:left;
+	}
+
+	.kuai
+	{
+		border:1px solid red;
+		width:30px;
+		height:30px;
+		margin:1px;
+	}
+</style>
+<BODY>
+	<img src="els.png" style="position:absolute;left:0px;top:0px;">
+	
+	<button style="position:absolute;left:480px;top:25px;" onclick="viewXiaYi()">我要研究向下移动</button>
+
+	<button style="position:absolute;left:480px;top:65px;" onclick="viewZuoYouYi()">我要研究左右移动</button>
+
+	<button style="position:absolute;left:480px;top:105px;" onclick="viewHeBing()">我要研究合并</button>
+
+	<button style="position:absolute;left:480px;top:145px;" onclick="viewSanKuai()">来个散块被挡</button>
+
+	<button style="position:absolute;left:480px;top:185px;" onclick="viewXiaoHang()">我要研究消行</button>
+
+
+	<button style="position:absolute;left:480px;top:215px;" onclick="window.location.reload()">刷新重来</button>
+
+
+	<TEXTAREA style="position:absolute;left:480px;top:255px;height:330px;" >备忘录：</TEXTAREA>
+ 
+</BODY>
+<SCRIPT LANGUAGE="JavaScript">
+/*
+	JS实现页面元素的拖放
+	思路：1.页面上一个时间只有一个东西可以拖放
+			 2.拖放就是HTML对象按下(onmousedown，开始拖)  document的onmousemove（移动）
+			HTML对象的抬起(onmouseup:放下);
+*/
+ function DragDrop(id){
+	this.html = (typeof id =='string'? document.getElementById(id):id);
+	var me = this;
+	this.downX = 0;
+	this.downY = 0;
+	this.init = function(){
+		this.html.style.position="absolute";
+		this.html.style.left=this.html.offsetLeft+"px";
+		this.html.style.top=this.html.offsetTop+"px";
+		this.html.onmousedown = function(e){
+					e = e||event;
+					me.downX = e.clientX-parseInt(this.style.left);
+					me.downY = e.clientY-parseInt(this.style.top);
+					DragDrop.nowDrag = me;
+					 
+					return false;
+		}
+		this.html.onmouseup = function(e){
+					e = e||event;
+					DragDrop.nowDrag = null;
+					 
+					return false;
+		}
+
+	}
+	this.move = function(x,y){
+		 
+		this.html.style.left = x-this.downX+"px";
+		this.html.style.top = y-this.downY+"px";
+	}
+	this.init();
+ }
+ //类的全局变量写法 相当于java的static变量
+ DragDrop.nowDrag = null;
+  //类的全局函数写法 相当于java的static函数
+ DragDrop.init = function(){
+	  document.onmousemove = function(e){
+			e = e||event;
+		if( DragDrop.nowDrag != null ){
+			DragDrop.nowDrag.move(e.clientX,e.clientY);
+		}
+		 return false;
+	 }
+ }
+  DragDrop.init();
+
+ </SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+	//表格（坐标）:刻度 行列
+	//行列， 单元格宽度
+    function zuoBiaoXi(hang,lie,kuan,px,py)
+	{
+		var table  = document.createElement("table");
+		table.border="1";
+		table.style.width=lie*kuan+"px";
+		table.style.height=hang*kuan+"px";
+//		alert(table.style.width+"  "+table.style.height )
+		table.id = "zb";
+		table.style.opacity = "0.7";
+		table.style.filter ="alpha(opacity=70)";
+		table.style.position="absolute";
+		table.style.left=px+"px";
+		table.style.top=py+"px";
+		document.body.appendChild(table);
+
+		for(var h=0;h<hang;h++)
+		{
+			var tr = table.insertRow(h);
+			for(var l=0;l<lie;l++)
+			{
+				var td = tr.insertCell(l);
+				td.innerHTML = "&nbsp;";
+				td.style.width=kuan+"px";
+				td.style.height=kuan+"px";
+				if(h==hang-1){
+					td.style.fontSize="8pt";
+					td.innerHTML = l*kuan;
+					td.style.padding="0px";
+					td.align="left";
+					td.style.verticalAlign ="bottom";
+				}
+
+				if( h==0){
+					td.style.fontSize="12pt";
+					td.innerHTML = l;
+					td.style.padding="0px";
+					td.align="left";
+					td.style.verticalAlign ="top";
+				}
+
+				if(l==lie-1&&h>0)
+				{
+					td.style.fontSize="8pt";
+					td.innerHTML = h*kuan;
+					td.style.padding="0px";
+					td.align="right";
+					td.style.verticalAlign ="top";
+				}
+				if(l==0)
+				{
+					td.style.fontSize="12pt";
+					td.innerHTML = h;
+					td.style.padding="0px";
+					td.align="left";
+					td.style.verticalAlign ="top";
+				}
+			}
+		}
+		return table;
+	}
+var t = zuoBiaoXi(20,10,30,30,5);
+
+/*var lk = t.cloneNode(true);
+for( var h = 0;h<20;h++  )
+{
+	for(var l=0;l<10;l++)
+	{
+		var ge = lk.rows[h].cells[l];
+		ge.style.fontSize="12pt";
+		ge.style.color="#330000";
+		ge.align="center";
+		ge.style.verticalAlign ="middle";
+		ge.innerHTML = "0";
+	}
+}
+document.body.appendChild( lk  );*/
+
+
+ 	//new DragDrop( lk);
+	 
+	 	var sk = t.cloneNode(true);
+		sk.style.border="1px solid #00CC00";
+		for( var h = 0;h<20;h++  )
+		{
+			for(var l=0;l<10;l++)
+			{
+				var ge = sk.rows[h].cells[l];
+				ge.style.border="1px solid #00CC00";
+				ge.style.fontSize="12pt";
+				ge.style.color="#00CC00";
+				ge.align="center";
+				ge.style.verticalAlign ="middle";
+				ge.innerHTML = "0";
+				ge.ondblclick = function()
+				{
+					this.innerHTML = "1";
+					this.style.backgroundImage="url(4.png)";
+					return false;
+				}
+			}
+		}
+		var yis = [  [15,4], [16,4],
+							[ 17, 2  ] , [ 17,3  ] , [ 17,4  ] , 
+							[18,0  ] ,[ 18,0 ],[ 18,1 ],[ 18,2 ],[ 18,3 ],[ 18,4 ],[ 18,5],[ 18,6 ],
+							[19,0  ] ,[ 19,0 ],[ 19,1 ],[ 19,2 ],[ 19,3 ],[ 19,4 ],[ 19,5],[ 19,6 ],[ 19,6 ] ];
+		
+		for(var h=0;h<yis.length;h++)
+		{
+				var td = sk.rows[ yis[h][0] ].cells[ yis[h][1] ];
+				td.innerHTML = "1";
+				td.style.backgroundImage="url(4.png)";
+		}
+
+		document.body.appendChild( sk  ); 
+		new DragDrop( sk);
+
+	 //块容器
+	var kuaiRongQi = document.createElement("div");
+	kuaiRongQi.style.position = "absolute";
+	kuaiRongQi.style.left="30px";
+	kuaiRongQi.style.top="5px";
+	kuaiRongQi.style.overflow = "visible";
+	//kuaiRongQi.style.border="1px solid red";
+
+	document.body.appendChild(kuaiRongQi);
+	//new DragDrop( kuaiRongQi);
+	//演示左移
+
+	function viewZuoYouYi()
+	{
+			var tables;
+			function zuoYouYi()
+			{
+				kuaiRongQi.innerHTML = "";
+				tables=[];
+				for( var l=0;l<10;l++ )
+				{
+					var table  = document.createElement("table");
+					table.border="1";
+					table.style.width=30+"px";
+					table.style.height=20*30+"px";
+					table.id="zb";
+					table.style.position="absolute";
+					table.style.opacity = "0.7";
+					table.style.filter ="alpha(opacity=70)";
+					table.onmouseover = function()
+					{
+						this.style.backgroundColor="white";
+					}
+
+					table.onmouseout = function()
+					{
+						this.style.backgroundColor="";
+					}
+				//	alert((l*30)+"px")
+					
+					for(var h = 0;h<20;h++)
+					{
+						var tr = table.insertRow(h);
+						var td = tr.insertCell(0);
+						td.innerHTML = "0";
+						td.style.fontSize="12pt";
+						td.style.color="#FF9900";
+						td.style.padding="0px";
+						td.align="center";
+						td.style.verticalAlign ="middle";
+						
+					}
+					new DragDrop( table);
+					kuaiRongQi.appendChild(table);
+					tables[l]=table;
+					table.style.left=(l*30)+"px";
+					table.style.top="0px";
+				} 
+			}
+			
+		zuoYouYi();
+		var yi = [ [0,3],[0,4],[0,5],[1,4] ];
+		for(var i=0;i<yi.length;i++)
+		{
+			var td = tables[ yi[i][1]].rows[yi[i][0]].cells[0];
+			td.style.backgroundImage="url(7.png)";
+			td.innerHTML = "1";
+		}
+}
+
+//------------------------------------------------------------
+function viewXiaoHang()
+{
+	kuaiRongQi.innerHTML = "";
+	for(var h=0;h<20;h++)
+	{
+		var csk = sk.rows[h].cloneNode(true);
+		var table=document.createElement("table");
+		var tbody = document.createElement("tbody");
+		table.style.width="300px";
+		table.style.opacity = "0.7";
+		table.style.filter ="alpha(opacity=70)";
+		table.appendChild(tbody);
+		table.id="zb";
+		tbody.appendChild( csk   );
+		kuaiRongQi.appendChild(table);
+		table.style.position="absolute";
+		table.style.left="0px";
+		table.style.top=30*h+"px";
+		table.style.zIndex=21-h;
+			csk.onmouseover = function()
+			{
+				this.style.backgroundColor="white";
+			}
+
+			csk.onmouseout = function()
+			{
+				this.style.backgroundColor="";
+			}
+		for(var l=0;l<10;l++)
+		{
+			csk.cells[l].ondblclick = function()
+			{
+					this.innerHTML = "1";
+					this.style.backgroundImage="url(4.png)";
+					return false;
+			}
+		}
+		new DragDrop(table);
+	}
+
+	sk.style.display="none";
+}
+//-----------------------------------------
+	function viewXiaYi()
+	{
+			var tables;
+			function xiaYi()
+			{
+				kuaiRongQi.innerHTML = "";
+				tables=[];
+				for( var h=0;h<20;h++ )
+				{
+					var table  = document.createElement("table");
+					table.border="1";
+					table.style.width=10*30+"px";
+					table.style.height=30+"px";
+					table.id="zb";
+					table.style.position="absolute";
+					table.style.zIndex=21-h;
+					table.style.opacity = "0.7";
+					table.style.filter ="alpha(opacity=70)";
+				//	alert((l*30)+"px")
+					var tr = table.insertRow(0);
+					tr.onmouseover = function()
+					{
+						this.style.backgroundColor="white";
+					}
+
+					tr.onmouseout = function()
+					{
+						this.style.backgroundColor="";
+					}
+
+					for(var l = 0;l<10;l++)
+					{
+				
+						var td = tr.insertCell(l);
+						td.innerHTML = "0";
+						td.style.fontSize="12pt";
+						td.style.color="#FF9900";
+						td.style.padding="0px";
+						td.align="center";
+						td.style.verticalAlign ="middle";
+					}
+					new DragDrop( table);
+					kuaiRongQi.appendChild(table);
+					tables[h]=table;
+					table.style.left="0px";
+					table.style.top=(h*30)+"px";
+				} 
+			}
+			
+		xiaYi();
+		var yi = [ [10,3],[10,4],[10,5],[11,4] ];
+		for(var i=0;i<yi.length;i++)
+		{
+			var td = tables[ yi[i][0]  ].rows[0].cells[yi[i][1]];
+			td.style.backgroundImage="url(7.png)";
+			td.innerHTML = "1";
+		}
+}
+sk.style.display="none";
+function viewHeBing()
+{
+	sk.style.display="block";
+}
+
+function viewSanKuai()
+{
+		 function ges1()
+		{
+			var d = document.createElement("div");
+			d.style.border="1px solid red";
+			d.style.color="white";
+			d.style.backgroundImage="url(4.png)";
+			d.style.width="28px";
+			d.style.height="28px";
+			d.style.margin="1px";
+			d.align="center";
+			d.style.paddingTop="3px";
+			d.innerHTML = 1;
+			d.style.overflow="hidden";
+			d.className="piao";
+			d.ondblclick = function()
+			{
+				if(sk.style.display=="block" )
+				{
+					var skLeft = parseInt(sk.style.left);
+					var skTop = parseInt(sk.style.top);
+					var left = this.offsetLeft+parseInt(kuai.style.left);
+					var top = this.offsetTop+parseInt(kuai.style.top);
+					
+					var lie = (parseInt((left-skLeft)/30))
+					var hang = (parseInt((top-skTop)/30))
+					if(lie>=0 && lie<10 && hang>=0 && hang<20)
+					{
+						var gg = sk.rows[hang].cells[lie];
+						if(gg!=null)
+						{
+							gg.ondblclick();
+							this.style.visibility  = "hidden";
+						}
+					}
+				}
+				return false;
+			}
+			return d;
+		}
+
+		var kuai =  document.createElement("div");
+		switch( parseInt(Math.random()*4 ))
+		{
+			case 0:
+				kuai.style.width="60px";
+			break;
+			case 1:
+				kuai.style.width="100px";
+			break;
+			case 2:
+				kuai.style.width="120px";
+			break;
+			case 3:
+				kuai.style.width="30px";
+			break;
+		}
+		
+		for(var i=0;i<4;i++)
+		{
+			kuai.appendChild( ges1()  );
+		}
+		document.body.appendChild(kuai);
+			new DragDrop( kuai);
+}
+ </SCRIPT>
+</HTML>

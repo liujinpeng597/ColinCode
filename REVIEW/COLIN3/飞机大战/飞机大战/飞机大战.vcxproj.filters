@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{c908be6b-dde8-4f7f-988e-2a17ab5c58a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Back">
+      <UniqueIdentifier>{6d673b15-a799-4922-8adc-3757b49e73a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGameFrame">
+      <UniqueIdentifier>{791e1745-6ce0-4db5-a0f1-b6cf6fc3c2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{e4def7bf-de21-4c90-b0ac-fb30efa2c4b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GunnerList">
+      <UniqueIdentifier>{f5fa2a88-8107-4d0b-b312-d026e18e7535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plane">
+      <UniqueIdentifier>{af35866a-d322-40cd-b7e5-a3fc4b2609b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{6e8ba74d-49c4-4e4d-9760-94438fca7c81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FoeList">
+      <UniqueIdentifier>{2dc12892-0ad0-40ed-a01b-a5e0040e784f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Back\Back.cpp">
+      <Filter>Back</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameFrame\CGameFrame.cpp">
+      <Filter>CGameFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="Foelist\Foe.cpp">
+      <Filter>FoeList</Filter>
+    </ClCompile>
+    <ClCompile Include="Foelist\FoeBig.cpp">
+      <Filter>FoeList</Filter>
+    </ClCompile>
+    <ClCompile Include="Foelist\FoeList.cpp">
+      <Filter>FoeList</Filter>
+    </ClCompile>
+    <ClCompile Include="Foelist\FoeMid.cpp">
+      <Filter>FoeList</Filter>
+    </ClCompile>
+    <ClCompile Include="Foelist\FoeSma.cpp">
+      <Filter>FoeList</Filter>
+    </ClCompile>
+    <ClCompile Include="GunnerList\Gunner.cpp">
+      <Filter>GunnerList</Filter>
+    </ClCompile>
+    <ClCompile Include="GunnerList\GunnerList.cpp">
+      <Filter>GunnerList</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane\Plane.cpp">
+      <Filter>Plane</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Back\Back.h">
+      <Filter>Back</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameFrame\CGameFrame.h">
+      <Filter>CGameFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\Config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Foelist\Foe.h">
+      <Filter>FoeList</Filter>
+    </ClInclude>
+    <ClInclude Include="Foelist\FoeBig.h">
+      <Filter>FoeList</Filter>
+    </ClInclude>
+    <ClInclude Include="Foelist\FoeList.h">
+      <Filter>FoeList</Filter>
+    </ClInclude>
+    <ClInclude Include="Foelist\FoeMid.h">
+      <Filter>FoeList</Filter>
+    </ClInclude>
+    <ClInclude Include="Foelist\FoeSma.h">
+      <Filter>FoeList</Filter>
+    </ClInclude>
+    <ClInclude Include="GunnerList\Gunner.h">
+      <Filter>GunnerList</Filter>
+    </ClInclude>
+    <ClInclude Include="GunnerList\GunnerList.h">
+      <Filter>GunnerList</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane\Plane.h">
+      <Filter>Plane</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\back.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\card.png">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\flame.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\foebig.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\foemid.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\foesma.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\gunner.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\player.jpg">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\player_mask.jpg">
+      <Filter>res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\boom.mp3">
+      <Filter>res</Filter>
+    </Media>
+    <Media Include="res\boost.mp3">
+      <Filter>res</Filter>
+    </Media>
+    <Media Include="res\playerBk.mp3">
+      <Filter>res</Filter>
+    </Media>
+  </ItemGroup>
+</Project>

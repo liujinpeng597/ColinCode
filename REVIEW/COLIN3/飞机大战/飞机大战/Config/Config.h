@@ -1,0 +1,7 @@
+#define BACKGROUND_W 600
+#define BACKGROUND_H 800
+#define BACKGROUND_MOVE_STEP 2
+
+#define PLAYER_W 60
+#define PLAYER_H 60
+#define PLAYER_MOVE_STEP 3

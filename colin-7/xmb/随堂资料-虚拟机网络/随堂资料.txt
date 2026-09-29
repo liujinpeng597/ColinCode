@@ -1,0 +1,27 @@
+虚拟机网络-随堂资料
+
+
+
+开发环境:
+
+windows下, 使用win10 环境 使用Qt 5.12.11 32位 mingw-32编译器
+
+linux下, 使用版本1604, 64位操作系统,  使用 Qt 5.9.9 gcc 64位编译器, mysql 5.7 
+
+虚拟机工作站  vmware 16 
+
+
+
+开发环境文件下载链接, 使用天翼云盘下载
+
+https://cloud.189.cn/t/JF32IfuQzuA3
+
+访问码：uan2
+
+
+
+也可以使用百度网盘, 链接如下
+
+链接：https://pan.baidu.com/s/1Fb4PdkU1772lzlccakR2HA?pwd=pq4k 
+
+提取码：pq4k 

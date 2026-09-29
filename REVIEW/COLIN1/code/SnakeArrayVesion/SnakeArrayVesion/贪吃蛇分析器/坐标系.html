@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="EditPlus">
+
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<style>
+	#zb
+	{
+		border:1px solid black;
+		border-collapse :collapse;
+		color:black;
+	}
+
+	#zb tr td
+	{
+		border:1px solid black;
+
+	}
+</style>
+<BODY>
+ 
+ 
+</BODY>
+<SCRIPT LANGUAGE="JavaScript">
+/*
+	JS实现页面元素的拖放
+	思路：1.页面上一个时间只有一个东西可以拖放
+			 2.拖放就是HTML对象按下(onmousedown，开始拖)  document的onmousemove（移动）
+			HTML对象的抬起(onmouseup:放下);
+*/
+ function DragDrop(id){
+	this.html = (typeof id =='string'? document.getElementById(id):id);
+	var me = this;
+	this.downX = 0;
+	this.downY = 0;
+	this.init = function(){
+		this.html.style.position="absolute";
+		this.html.style.left=this.html.offsetLeft+"px";
+		this.html.style.top=this.html.offsetTop+"px";
+		this.html.onmousedown = function(e){
+					e = e||event;
+					me.downX = e.clientX-parseInt(this.style.left);
+					me.downY = e.clientY-parseInt(this.style.top);
+					DragDrop.nowDrag = me;
+					return false;
+		}
+		this.html.onmouseup = function(e){
+					e = e||event;
+					DragDrop.nowDrag = null;
+					var mx = parseInt(this.style.left);
+					var my = parseInt(this.style.top);
+					this.value = parseInt(my/30)+",\n"+parseInt(mx/30);
+					return false;
+		}
+
+	}
+	this.move = function(x,y){
+		 
+		this.html.style.left = x-this.downX+"px";
+		this.html.style.top = y-this.downY+"px";
+		
+	}
+	this.init();
+ }
+ //类的全局变量写法 相当于java的static变量
+ DragDrop.nowDrag = null;
+  //类的全局函数写法 相当于java的static函数
+ DragDrop.init = function(){
+	  document.onmousemove = function(e){
+			e = e||event;
+		if( DragDrop.nowDrag != null ){
+			DragDrop.nowDrag.move(e.clientX,e.clientY);
+		}
+		 return false;
+	 }
+ }
+  DragDrop.init();
+
+ </SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+	//表格（坐标）:刻度 行列
+	//行列， 单元格宽度
+    function zuoBiaoXi(hang,lie,kuan,px,py)
+	{
+		var table  = document.createElement("table");
+		table.border="1";
+		table.style.width=hang*kuan+"px";
+		table.style.height=lie*kuan+"px";
+		table.id = "zb";
+		table.style.opacity = "0.4";
+		table.style.filter ="alpha(opacity=40)";
+		table.style.position="absolute";
+		table.style.left=px+"px";
+		table.style.top=py+"px";
+		document.body.appendChild(table);
+
+		for(var h=0;h<hang;h++)
+		{
+			var tr = table.insertRow(h);
+			for(var l=0;l<lie;l++)
+			{
+				var td = tr.insertCell(l);
+				td.innerHTML = "&nbsp;";
+				td.style.width=kuan+"px";
+				td.style.height=kuan+"px";
+				if(h==0){
+					td.style.fontSize="8pt";
+					td.innerHTML = l*kuan;
+					td.style.padding="0px";
+					td.align="left";
+					td.style.verticalAlign ="top";
+				}
+
+				if(h==hang-1 ){
+					td.style.fontSize="12pt";
+					td.innerHTML = l;
+					td.style.padding="0px";
+					td.align="center";
+					td.style.verticalAlign ="middle";
+				}
+
+				if(l==0)
+				{
+					td.style.fontSize="8pt";
+					td.innerHTML = h*kuan;
+					td.style.padding="0px";
+					td.align="left";
+					td.style.verticalAlign ="top";
+				}
+				if(l==lie-1&&h>0)
+				{
+					td.style.fontSize="12pt";
+					td.innerHTML = h;
+					td.style.padding="0px";
+					td.align="center";
+					td.style.verticalAlign ="middle";
+				}
+			}
+		}
+	}
+zuoBiaoXi(10,10,50,0,0);
+ 
+
+ </SCRIPT>
+</HTML>

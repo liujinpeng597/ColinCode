@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<style>
+	#zb
+	{
+		border:1px solid #FF0000;
+		border-collapse :collapse;
+		color:#000;
+	}
+
+	#zb tr td
+	{
+		border:1px solid #FF0000;
+
+	}
+
+	.piao
+	{
+		float:left;
+	}
+
+	.kuai
+	{
+		border:1px solid red;
+		width:30px;
+		height:30px;
+		margin:1px;
+	}
+</style>
+<BODY  >
+	<IMG id="ren" style="z-index:2000" SRC="人.PNG" WIDTH="32" HEIGHT="30" BORDER="0" ALT="">
+	<div id="bans" style="width:380px;border:0px solid red;position:absolute;left:140px;top:120px;">
+	</div>
+	<IMG id="beiJing" style="position:absolute;left:100px;top:50px;"   SRC="相框.png" WIDTH="632" HEIGHT="430" BORDER="0" ALT="">
+
+</BODY>
+<SCRIPT LANGUAGE="JavaScript">
+/*
+	JS实现页面元素的拖放
+	思路：1.页面上一个时间只有一个东西可以拖放
+			 2.拖放就是HTML对象按下(onmousedown，开始拖)  document的onmousemove（移动）
+			HTML对象的抬起(onmouseup:放下);
+*/
+ function DragDrop(id){
+	this.html = (typeof id =='string'? document.getElementById(id):id);
+	var me = this;
+	this.downX = 0;
+	this.downY = 0;
+	this.init = function(){
+		this.html.style.position="absolute";
+		this.html.style.left=this.html.offsetLeft+"px";
+		this.html.style.top=this.html.offsetTop+"px";
+		this.html.onmousedown = function(e){
+					e = e||event;
+					me.downX = e.clientX-parseInt(this.style.left);
+					me.downY = e.clientY-parseInt(this.style.top);
+					DragDrop.nowDrag = me;
+					return false;
+		}
+		this.html.onmouseup = function(e){
+					e = e||event;
+					DragDrop.nowDrag = null;
+					return false;
+		}
+
+	}
+	this.move = function(x,y){
+		 
+		this.html.style.left = x-this.downX+"px";
+		this.html.style.top = y-this.downY+"px";
+	}
+	this.init();
+ }
+ //类的全局变量写法 相当于java的static变量
+ DragDrop.nowDrag = null;
+  //类的全局函数写法 相当于java的static函数
+ DragDrop.init = function(){
+	  document.onmousemove = function(e){
+			e = e||event;
+		if( DragDrop.nowDrag != null ){
+			DragDrop.nowDrag.move(e.clientX,e.clientY);
+		}
+		 return false;
+	 }
+ }
+  DragDrop.init();
+
+ </SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+ 	new DragDrop("ren");
+	//new DragDrop("bans");
+
+	function ban( x,y,index )
+	{
+		var img = document.createElement("div");
+		//img.src="板.PNG";
+		new DragDrop(img);
+		img.style.left=x+"px";
+		img.style.top=y+"px";
+		img.innerHTML = index;
+		img.style.width="95px";
+		img.style.height="15px";
+		img.style.backgroundImage="url(板.PNG)";
+		img.style.overflow="hidden";
+		img.align="center";
+		return img;
+	}
+
+	var bans = document.getElementById("bans");
+ 
+	for(var i=0;i<10;i++)
+	{
+		var img = ban( parseInt(Math.random()*280),50*i+200,i);
+		bans.appendChild(img);
+	}
+	
+	document.onkeydown = function(){
+		
+		var y = parseInt(bans.style.top);
+		if(event.keyCode==38)
+		{
+			y-=2;
+		}
+		else if(event.keyCode==40)
+		{
+			y+=2;
+		}
+		bans.style.top = y+"px";
+	}
+</SCRIPT>
+</HTML>
